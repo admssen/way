@@ -8,3 +8,13 @@ C:\Users\Teribly\Documents\vs-projects\wedoforms\obj\Debug\wedoforms.csproj.Gene
 C:\Users\Teribly\Documents\vs-projects\wedoforms\obj\Debug\wedoforms.csproj.CoreCompileInputs.cache
 C:\Users\Teribly\Documents\vs-projects\wedoforms\obj\Debug\wedoforms.exe
 C:\Users\Teribly\Documents\vs-projects\wedoforms\obj\Debug\wedoforms.pdb
+C:\Users\Teribly\Documents\way\lab1\wedoforms\bin\Debug\wedoforms.exe.config
+C:\Users\Teribly\Documents\way\lab1\wedoforms\bin\Debug\wedoforms.exe
+C:\Users\Teribly\Documents\way\lab1\wedoforms\bin\Debug\wedoforms.pdb
+C:\Users\Teribly\Documents\way\lab1\wedoforms\obj\Debug\wedoforms.csproj.AssemblyReference.cache
+C:\Users\Teribly\Documents\way\lab1\wedoforms\obj\Debug\wedoforms.Form1.resources
+C:\Users\Teribly\Documents\way\lab1\wedoforms\obj\Debug\wedoforms.Properties.Resources.resources
+C:\Users\Teribly\Documents\way\lab1\wedoforms\obj\Debug\wedoforms.csproj.GenerateResource.cache
+C:\Users\Teribly\Documents\way\lab1\wedoforms\obj\Debug\wedoforms.csproj.CoreCompileInputs.cache
+C:\Users\Teribly\Documents\way\lab1\wedoforms\obj\Debug\wedoforms.exe
+C:\Users\Teribly\Documents\way\lab1\wedoforms\obj\Debug\wedoforms.pdb

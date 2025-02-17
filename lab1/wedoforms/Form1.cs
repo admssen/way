@@ -12,36 +12,30 @@ namespace wedoforms
 {
     public partial class Form1 : Form
     {
-        private bool lbm;
-        private bool rbm;
+        private bool tap;
+        private bool taptap;
         public Form1()
         {
-            InitializeComponent();
-            BaseSettings();
-            lbm = false;
-            rbm = false;
+            setAll();
         }
-        private void BaseSettings()
+        public void setAll()
         {
+            InitializeComponent();
             this.KeyPreview = true;
-            this.BackColor = Color.SeaShell;
             this.ContextMenuStrip = contextMenuStrip1;
+            this.tap = false;
+            this.taptap = false;
         }
         private void Form1_MouseClick(object sender, MouseEventArgs e)
-        { if (e.Button == MouseButtons.Left) { lbm = true; } }
+        { if (e.Button == MouseButtons.Left) { tap = true; } }
         private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
-        { if (e.Button == MouseButtons.Left) { rbm = true; } }
+        { if (e.Button == MouseButtons.Left) { taptap = true; } }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Alt && e.KeyCode == Keys.I && lbm)
-            {
-                Form1 reset = new Form1();
-                reset.Show();
-                this.Dispose(false);
-            }else if (e.Alt && e.KeyCode == Keys.X && rbm)
-            {
-                this.Dispose(false);
-            }
+            if (tap && e.Alt && e.KeyCode == Keys.I)
+            { setAll(); }
+            else if (taptap && e.Alt && e.KeyCode == Keys.X)
+            { this.Close(); }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {this.Text = "praise the "+comboBox1.SelectedItem.ToString()+"!";}
@@ -65,19 +59,14 @@ namespace wedoforms
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {this.BackColor = ColorTranslator.FromHtml("#777799");}
-
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {this.BackColor = ColorTranslator.FromHtml("#666688");}
-
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {this.BackColor = ColorTranslator.FromHtml("#555577");}
-
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {this.BackColor = ColorTranslator.FromHtml("#444466");}
-
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {this.BackColor = ColorTranslator.FromHtml("#333355");}
-
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {this.BackColor = ColorTranslator.FromHtml("#222244");}
 
@@ -109,6 +98,34 @@ namespace wedoforms
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             
+        }
+        private void ToolStripMenuItemI_Click(object sender, EventArgs e)
+        { if (!string.IsNullOrEmpty(textBox2.Text)) { listBox3.Items.Add(textBox2.Text); } }
+        private void ToolStripMenuItemII_Click(object sender, EventArgs e)
+        { foreach (string s in listBox3.SelectedItems.OfType<string>().ToList()) { listBox3.Items.Remove(s); } }
+        private void ToolStripMenuItemIII_Click(object sender, EventArgs e)
+        {
+            string lb3_shortest = "nuh";
+            int lb3_shortest_l = 0;
+            string lb3_longest = "uh";
+            int lb3_longest_l = 0;
+            foreach (string parsed in listBox3.Items.OfType<string>().ToList())
+            {
+                int parsed_l = parsed.Length;
+                if (lb3_shortest_l == 0)
+                { lb3_shortest_l = parsed_l; lb3_shortest = parsed; }
+                else if (parsed_l < lb3_shortest_l)
+                { lb3_shortest_l = parsed_l; lb3_shortest = parsed; }
+                if (lb3_longest_l == 0)
+                { lb3_longest_l = parsed_l; lb3_longest = parsed; }
+                else if (parsed_l > lb3_longest_l)
+                { lb3_longest_l = parsed_l; lb3_longest = parsed; }
+            }
+            MessageBox.Show(lb3_shortest + " " + lb3_longest);
+        }
+        private void ToolStripMenuItemIV_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

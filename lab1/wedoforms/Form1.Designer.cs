@@ -44,14 +44,17 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.oneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.twoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.threeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemI = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemII = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemIII = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemIV = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -70,7 +73,7 @@
             "ice",
             "metal",
             "light"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 59);
+            this.comboBox1.Location = new System.Drawing.Point(266, 194);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 0;
@@ -167,7 +170,7 @@
             // 
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(266, 31);
+            this.groupBox2.Location = new System.Drawing.Point(139, 205);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(121, 66);
             this.groupBox2.TabIndex = 3;
@@ -200,16 +203,16 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(12, 89);
+            this.listBox1.Location = new System.Drawing.Point(12, 59);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(121, 84);
+            this.listBox1.Size = new System.Drawing.Size(121, 212);
             this.listBox1.TabIndex = 4;
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(12, 179);
+            this.listBox2.Location = new System.Drawing.Point(266, 226);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(121, 84);
             this.listBox2.TabIndex = 5;
@@ -227,31 +230,42 @@
             this.contextMenuStrip1.AllowDrop = true;
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.oneToolStripMenuItem,
-            this.twoToolStripMenuItem,
-            this.threeToolStripMenuItem});
+            this.ToolStripMenuItemI,
+            this.ToolStripMenuItemII,
+            this.ToolStripMenuItemIII,
+            this.ToolStripMenuItemIV});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(113, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 100);
             this.contextMenuStrip1.Text = "what";
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
-            // oneToolStripMenuItem
+            // ToolStripMenuItemI
             // 
-            this.oneToolStripMenuItem.Name = "oneToolStripMenuItem";
-            this.oneToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
-            this.oneToolStripMenuItem.Text = "one";
+            this.ToolStripMenuItemI.Name = "ToolStripMenuItemI";
+            this.ToolStripMenuItemI.Size = new System.Drawing.Size(210, 24);
+            this.ToolStripMenuItemI.Text = "send line";
+            this.ToolStripMenuItemI.Click += new System.EventHandler(this.ToolStripMenuItemI_Click);
             // 
-            // twoToolStripMenuItem
+            // ToolStripMenuItemII
             // 
-            this.twoToolStripMenuItem.Name = "twoToolStripMenuItem";
-            this.twoToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
-            this.twoToolStripMenuItem.Text = "two";
+            this.ToolStripMenuItemII.Name = "ToolStripMenuItemII";
+            this.ToolStripMenuItemII.Size = new System.Drawing.Size(210, 24);
+            this.ToolStripMenuItemII.Text = "perish chosen";
+            this.ToolStripMenuItemII.Click += new System.EventHandler(this.ToolStripMenuItemII_Click);
             // 
-            // threeToolStripMenuItem
+            // ToolStripMenuItemIII
             // 
-            this.threeToolStripMenuItem.Name = "threeToolStripMenuItem";
-            this.threeToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
-            this.threeToolStripMenuItem.Text = "three";
+            this.ToolStripMenuItemIII.Name = "ToolStripMenuItemIII";
+            this.ToolStripMenuItemIII.Size = new System.Drawing.Size(210, 24);
+            this.ToolStripMenuItemIII.Text = "c) find match";
+            this.ToolStripMenuItemIII.Click += new System.EventHandler(this.ToolStripMenuItemIII_Click);
+            // 
+            // ToolStripMenuItemIV
+            // 
+            this.ToolStripMenuItemIV.Name = "ToolStripMenuItemIV";
+            this.ToolStripMenuItemIV.Size = new System.Drawing.Size(210, 24);
+            this.ToolStripMenuItemIV.Text = "g) retrieve lines";
+            this.ToolStripMenuItemIV.Click += new System.EventHandler(this.ToolStripMenuItemIV_Click);
             // 
             // menuStrip1
             // 
@@ -262,7 +276,7 @@
             this.sixToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(532, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(586, 28);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -287,18 +301,36 @@
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 269);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 343);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(532, 24);
+            this.statusStrip1.Size = new System.Drawing.Size(586, 22);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(393, 31);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(181, 22);
+            this.textBox2.TabIndex = 12;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 16;
+            this.listBox3.Location = new System.Drawing.Point(393, 59);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(181, 212);
+            this.listBox3.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(532, 293);
+            this.ClientSize = new System.Drawing.Size(586, 365);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.textBox1);
@@ -344,14 +376,17 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem oneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem twoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem threeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemI;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemII;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemIII;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fourToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fiveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sixToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemIV;
     }
 }
 
