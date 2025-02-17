@@ -1,2 +1,6 @@
-# way
-it is just here so my teacher can watch my progress.
+Семенов Максим, ИБАС-22.02
+
+---
+
+### Лабораторная 1
+Код: [Form1.cs](/lab1/wedoforms/Form1.cs)
