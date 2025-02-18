@@ -417,6 +417,8 @@
             this.Controls.Add(this.comboBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "praise the form!";
             this.Load += new System.EventHandler(this.Form1_Load);
