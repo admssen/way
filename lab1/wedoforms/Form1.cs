@@ -13,12 +13,12 @@ namespace wedoforms
 {
     public partial class Form1 : Form
     {
-        private bool tap;
-        private bool taptap;
-        private bool praise_forbidden;
-        private bool souls_forbidden;
-        Thread NewOne;
-        public Form1()
+        private bool tap; // для комбо с кликом
+        private bool taptap; // для комбо с двойным кликом
+        private bool praise_forbidden; // для блокирования комбобокса
+        private bool souls_forbidden; // для блокирования радиокнопок
+        Thread NewOne; // помогает избежать странного бага при ресете
+        public Form1() // конструктор
         {
             InitializeComponent();
             this.CenterToScreen();
@@ -29,29 +29,35 @@ namespace wedoforms
             this.praise_forbidden = false;
             this.souls_forbidden = false;
         }
-        public void setAll()
+        public void setAll() // закрыть текущую форму, начать новую
         {
             this.Close();
             NewOne = new Thread(form_reset_bugless);
             NewOne.SetApartmentState(ApartmentState.STA);
             NewOne.Start();
         }
-        private void form_reset_bugless(object frm)
+        private void form_reset_bugless(object frm) // то, что попадает в новый поток
         {
             Application.Run(new Form1());
         }
-        private void Form1_MouseClick(object sender, MouseEventArgs e)
+
+        // КОМБИНАЦИИ С ФОРМОЙ
+        
+        private void Form1_MouseClick(object sender, MouseEventArgs e) // клик
         { if (e.Button == MouseButtons.Left) { tap = true; } }
-        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e) // двойной клик
         { if (e.Button == MouseButtons.Left) { taptap = true; } }
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void Form1_KeyDown(object sender, KeyEventArgs e) // комбинации с альтом
         {
             if (tap && e.Alt && e.KeyCode == Keys.I)
             { setAll(); }
             else if (taptap && e.Alt && e.KeyCode == Keys.X)
             { this.Close(); }
         }
-        private void ToolStripMenuItemdI_Click(object sender, EventArgs e)
+
+        // МЕНЮ ОКНА, ВСЁ С ЦИФРАМИ
+        
+        private void ToolStripMenuItemdI_Click(object sender, EventArgs e) // отправить число из текстбокса в листбокс. Форматировать.
         {
             if (!string.IsNullOrEmpty(textBox1.Text)) {
                 string parsed = textBox1.Text;
@@ -66,10 +72,10 @@ namespace wedoforms
             else { MessageBox.Show("there's nothing"); }
         }
 
-        private void ToolStripMenuItemdII_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemdII_Click(object sender, EventArgs e) // удалить выделенные
         { foreach (string s in listBox1.SelectedItems.OfType<string>().ToList()) { listBox1.Items.Remove(s); } }
 
-        private void ToolStripMenuItemdIII_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemdIII_Click(object sender, EventArgs e) // перенести с чётными целыми частями
         {
             foreach (string parsed in listBox1.Items.OfType<string>().ToList())
             {
@@ -78,7 +84,7 @@ namespace wedoforms
             }
         }
 
-        private void toolStripMenuItemdIV_Click(object sender, EventArgs e)
+        private void toolStripMenuItemdIV_Click(object sender, EventArgs e) // перенести среднее геометрическое
         {
             double multi = 1;
             double count = 0;
@@ -94,9 +100,12 @@ namespace wedoforms
             if (count > 0) { result = Math.Pow(multi, 1 / count).ToString(); }
             if (result != "") { listBox2.Items.Add(result); }
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+        // КОМБО БОКС
+        
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) // меняет заголовок окна
         { if (!praise_forbidden) { this.Text = "praise the " + comboBox1.SelectedItem.ToString() + "!"; } }
-        private void comboBox1_KeyDown_1(object sender, KeyEventArgs e)
+        private void comboBox1_KeyDown_1(object sender, KeyEventArgs e) // добавляет элементы на энтер
         {
             if (!praise_forbidden)
             {
