@@ -71,7 +71,6 @@ namespace wedoforms
             }
             else { MessageBox.Show("there's nothing"); }
         }
-
         private void ToolStripMenuItemdII_Click(object sender, EventArgs e) // удалить выделенные
         { foreach (string s in listBox1.SelectedItems.OfType<string>().ToList()) { listBox1.Items.Remove(s); } }
 
@@ -83,7 +82,6 @@ namespace wedoforms
                 { listBox2.Items.Add(parsed); }
             }
         }
-
         private void toolStripMenuItemdIV_Click(object sender, EventArgs e) // перенести среднее геометрическое
         {
             double multi = 1;
@@ -118,7 +116,9 @@ namespace wedoforms
             }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        // РАДИОКНОПКИ, МЕНЯЮТ ЦВЕТ
+        
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) // с хард-коженной проверкой на чекбоксы
         {
             if (!souls_forbidden) { this.BackColor = ColorTranslator.FromHtml("#777799"); }
             else { radioButton1.Checked = false; }
