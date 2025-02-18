@@ -149,7 +149,9 @@ namespace wedoforms
             else { radioButton6.Checked = false; }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        // ВВОД ЦИФР В ТЕКСТБОКС. ПОПРОБУЙТЕ СЛОМАЙТЕ ЭТО! (ой, Ctrl+V...)
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e) // оно работает.
         {
             bool hdle = true;
             string parsed = textBox1.Text.ToString();
@@ -178,21 +180,20 @@ namespace wedoforms
             e.Handled = hdle;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            praise_forbidden = checkBox1.Checked;
-        }
+        // ЧЕКБОКСЫ
+        
+        private void checkBox1_CheckedChanged(object sender, EventArgs e) // блокирует комбобокс
+        { praise_forbidden = checkBox1.Checked; }
+        private void checkBox2_CheckedChanged(object sender, EventArgs e) // блокирует радиокнопки
+        { souls_forbidden = checkBox2.Checked; }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            souls_forbidden = checkBox2.Checked;
-        }
-
-        private void ToolStripMenuItemI_Click(object sender, EventArgs e)
+        // КОНТЕКСТНОЕ МЕНЮ
+        
+        private void ToolStripMenuItemI_Click(object sender, EventArgs e) // отправить строку
         { if (!string.IsNullOrEmpty(textBox2.Text)) { listBox3.Items.Add(textBox2.Text); } }
-        private void ToolStripMenuItemII_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemII_Click(object sender, EventArgs e) // удалить выделение
         { foreach (string s in listBox3.SelectedItems.OfType<string>().ToList()) { listBox3.Items.Remove(s); } }
-        private void ToolStripMenuItemIII_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemIII_Click(object sender, EventArgs e) // соединяет короткую с длинной
         {
             string lb3_shortest = "nuh";
             int lb3_shortest_l = 0;
@@ -212,7 +213,7 @@ namespace wedoforms
             }
             MessageBox.Show(lb3_shortest + " " + lb3_longest);
         }
-        private void ToolStripMenuItemIV_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemIV_Click(object sender, EventArgs e) // ищет по букве
         {
             List<int> rating = new List<int>();
             int maxcount = 0;
@@ -237,6 +238,8 @@ namespace wedoforms
             MessageBox.Show(result);
         }
 
+        // ВЫВОД СТАТУСОВ
+        
         private void textBox1_MouseEnter(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = textBox1.Name.ToString();
