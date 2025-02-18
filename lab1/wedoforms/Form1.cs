@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace wedoforms
 {
@@ -14,19 +15,27 @@ namespace wedoforms
     {
         private bool tap;
         private bool taptap;
+        Thread NewOne;
         public Form1()
         {
-            setAll();
-        }
-        public void setAll()
-        {
             InitializeComponent();
+            this.CenterToScreen();
             this.KeyPreview = true;
             this.ContextMenuStrip = contextMenuStrip1;
             this.tap = false;
             this.taptap = false;
         }
-
+        public void setAll()
+        {
+            this.Close();
+            NewOne = new Thread(form_reset_bugless);
+            NewOne.SetApartmentState(ApartmentState.STA);
+            NewOne.Start();
+        }
+        private void form_reset_bugless(object frm)
+        {
+            Application.Run(new Form1());
+        }
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         { if (e.Button == MouseButtons.Left) { tap = true; } }
         private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
