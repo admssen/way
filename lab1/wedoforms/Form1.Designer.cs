@@ -54,10 +54,10 @@
             this.ToolStripMenuItemdIII = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemdIV = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -78,7 +78,7 @@
             "ice",
             "metal",
             "light"});
-            this.comboBox1.Location = new System.Drawing.Point(874, 1);
+            this.comboBox1.Location = new System.Drawing.Point(607, 1);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(119, 24);
             this.comboBox1.TabIndex = 0;
@@ -110,7 +110,7 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(680, 41);
+            this.groupBox1.Location = new System.Drawing.Point(413, 41);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(116, 247);
             this.groupBox1.TabIndex = 2;
@@ -357,35 +357,11 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 421);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 305);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(993, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(726, 22);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(802, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 22);
-            this.textBox2.TabIndex = 12;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.textBox2.MouseEnter += new System.EventHandler(this.textBox2_MouseEnter);
-            this.textBox2.MouseLeave += new System.EventHandler(this.textBox2_MouseLeave);
-            // 
-            // listBox3
-            // 
-            this.listBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(802, 76);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(179, 212);
-            this.listBox3.TabIndex = 13;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
-            this.listBox3.MouseEnter += new System.EventHandler(this.listBox3_MouseEnter);
-            this.listBox3.MouseLeave += new System.EventHandler(this.listBox3_MouseLeave);
             // 
             // toolStripStatusLabel1
             // 
@@ -399,12 +375,36 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 16);
             this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Location = new System.Drawing.Point(535, 41);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(179, 22);
+            this.textBox2.TabIndex = 12;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.MouseEnter += new System.EventHandler(this.textBox2_MouseEnter);
+            this.textBox2.MouseLeave += new System.EventHandler(this.textBox2_MouseLeave);
+            // 
+            // listBox3
+            // 
+            this.listBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 16;
+            this.listBox3.Location = new System.Drawing.Point(535, 76);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(179, 212);
+            this.listBox3.TabIndex = 13;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
+            this.listBox3.MouseEnter += new System.EventHandler(this.listBox3_MouseEnter);
+            this.listBox3.MouseLeave += new System.EventHandler(this.listBox3_MouseLeave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(993, 443);
+            this.ClientSize = new System.Drawing.Size(726, 327);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.statusStrip1);
