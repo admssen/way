@@ -80,6 +80,7 @@
             this.comboBox1.Size = new System.Drawing.Size(119, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown_1);
             // 
             // radioButton1
             // 
@@ -102,9 +103,9 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(709, 41);
+            this.groupBox1.Location = new System.Drawing.Point(680, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(87, 173);
+            this.groupBox1.Size = new System.Drawing.Size(116, 247);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "souls";
@@ -175,10 +176,10 @@
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Location = new System.Drawing.Point(266, 41);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(101, 66);
+            this.groupBox2.Size = new System.Drawing.Size(116, 247);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "vex";
             // 
             // checkBox2
             // 
@@ -227,7 +228,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 22);
             this.textBox1.TabIndex = 8;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // contextMenuStrip1
             // 
@@ -292,25 +293,28 @@
             this.ToolStripMenuItemdI.Name = "ToolStripMenuItemdI";
             this.ToolStripMenuItemdI.Size = new System.Drawing.Size(109, 24);
             this.ToolStripMenuItemdI.Text = "send number";
-            this.ToolStripMenuItemdI.Click += new System.EventHandler(this.fourToolStripMenuItem_Click);
+            this.ToolStripMenuItemdI.Click += new System.EventHandler(this.ToolStripMenuItemdI_Click);
             // 
             // ToolStripMenuItemdII
             // 
             this.ToolStripMenuItemdII.Name = "ToolStripMenuItemdII";
             this.ToolStripMenuItemdII.Size = new System.Drawing.Size(118, 24);
             this.ToolStripMenuItemdII.Text = "perish number";
+            this.ToolStripMenuItemdII.Click += new System.EventHandler(this.ToolStripMenuItemdII_Click);
             // 
             // ToolStripMenuItemdIII
             // 
             this.ToolStripMenuItemdIII.Name = "ToolStripMenuItemdIII";
             this.ToolStripMenuItemdIII.Size = new System.Drawing.Size(136, 24);
             this.ToolStripMenuItemdIII.Text = "c - send numbers";
+            this.ToolStripMenuItemdIII.Click += new System.EventHandler(this.ToolStripMenuItemdIII_Click);
             // 
             // toolStripMenuItemdIV
             // 
             this.toolStripMenuItemdIV.Name = "toolStripMenuItemdIV";
             this.toolStripMenuItemdIV.Size = new System.Drawing.Size(137, 24);
             this.toolStripMenuItemdIV.Text = "d - retrieve cause";
+            this.toolStripMenuItemdIV.Click += new System.EventHandler(this.toolStripMenuItemdIV_Click);
             // 
             // statusStrip1
             // 
