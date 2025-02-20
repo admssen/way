@@ -27,13 +27,13 @@ namespace wedoforms
             cb2 = new CheckBox();
             //cb1.Top = 100;
             //cb1.Left = 200;
-            cb1.Location = Location = new System.Drawing.Point(380, 20);
+            cb1.Location = Location = new System.Drawing.Point(400, 20);
             cb1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb1.Name = "cb1";
             cb1.Text = "lock";
             //cb2.Top = 200;
             //cb2.Left = 200;
-            cb2.Location = Location = new System.Drawing.Point(240, 205);
+            cb2.Location = Location = new System.Drawing.Point(260, 182);
             cb2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb2.Name = "cb2";
             cb2.Text = "lock";

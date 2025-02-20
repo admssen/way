@@ -74,9 +74,10 @@
             "ice",
             "metal",
             "light"});
-            this.comboBox1.Location = new System.Drawing.Point(456, 1);
+            this.comboBox1.Location = new System.Drawing.Point(366, 1);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(119, 24);
+            this.comboBox1.Size = new System.Drawing.Size(90, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown_1);
@@ -86,9 +87,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 21);
+            this.radioButton1.Location = new System.Drawing.Point(4, 17);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(73, 20);
+            this.radioButton1.Size = new System.Drawing.Size(58, 17);
             this.radioButton1.TabIndex = 1;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "gloomy";
@@ -106,9 +108,11 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(289, 76);
+            this.groupBox1.Location = new System.Drawing.Point(240, 41);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(89, 178);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(67, 145);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "souls";
@@ -116,9 +120,10 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 152);
+            this.radioButton6.Location = new System.Drawing.Point(4, 124);
+            this.radioButton6.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(59, 20);
+            this.radioButton6.Size = new System.Drawing.Size(49, 17);
             this.radioButton6.TabIndex = 6;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "gone";
@@ -130,9 +135,10 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 125);
+            this.radioButton5.Location = new System.Drawing.Point(4, 102);
+            this.radioButton5.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(67, 20);
+            this.radioButton5.Size = new System.Drawing.Size(55, 17);
             this.radioButton5.TabIndex = 5;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "darker";
@@ -144,9 +150,10 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 99);
+            this.radioButton4.Location = new System.Drawing.Point(4, 80);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(55, 20);
+            this.radioButton4.Size = new System.Drawing.Size(46, 17);
             this.radioButton4.TabIndex = 4;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "dark";
@@ -158,9 +165,10 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 73);
+            this.radioButton3.Location = new System.Drawing.Point(4, 59);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(67, 20);
+            this.radioButton3.Size = new System.Drawing.Size(57, 17);
             this.radioButton3.TabIndex = 3;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "twilight";
@@ -172,9 +180,10 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 46);
+            this.radioButton2.Location = new System.Drawing.Point(4, 37);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 20);
+            this.radioButton2.Size = new System.Drawing.Size(53, 17);
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "shady";
@@ -186,10 +195,10 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(12, 76);
+            this.listBox1.Location = new System.Drawing.Point(8, 66);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(121, 212);
+            this.listBox1.Size = new System.Drawing.Size(92, 134);
             this.listBox1.TabIndex = 4;
             this.listBox1.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.listBox1.MouseLeave += new System.EventHandler(this.bye_mouse);
@@ -197,19 +206,20 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(139, 76);
+            this.listBox2.Location = new System.Drawing.Point(103, 66);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(121, 212);
+            this.listBox2.Size = new System.Drawing.Size(92, 134);
             this.listBox2.TabIndex = 5;
             this.listBox2.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.listBox2.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 41);
+            this.textBox1.Location = new System.Drawing.Point(8, 41);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
+            this.textBox1.Size = new System.Drawing.Size(92, 20);
             this.textBox1.TabIndex = 8;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.MouseEnter += new System.EventHandler(this.hi_mouse);
@@ -225,34 +235,34 @@
             this.ToolStripMenuItemIII,
             this.ToolStripMenuItemIV});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 92);
             this.contextMenuStrip1.Text = "what";
             // 
             // ToolStripMenuItemI
             // 
             this.ToolStripMenuItemI.Name = "ToolStripMenuItemI";
-            this.ToolStripMenuItemI.Size = new System.Drawing.Size(180, 24);
+            this.ToolStripMenuItemI.Size = new System.Drawing.Size(154, 22);
             this.ToolStripMenuItemI.Text = "send line";
             this.ToolStripMenuItemI.Click += new System.EventHandler(this.ToolStripMenuItemI_Click);
             // 
             // ToolStripMenuItemII
             // 
             this.ToolStripMenuItemII.Name = "ToolStripMenuItemII";
-            this.ToolStripMenuItemII.Size = new System.Drawing.Size(180, 24);
+            this.ToolStripMenuItemII.Size = new System.Drawing.Size(154, 22);
             this.ToolStripMenuItemII.Text = "perish chosen";
             this.ToolStripMenuItemII.Click += new System.EventHandler(this.ToolStripMenuItemII_Click);
             // 
             // ToolStripMenuItemIII
             // 
             this.ToolStripMenuItemIII.Name = "ToolStripMenuItemIII";
-            this.ToolStripMenuItemIII.Size = new System.Drawing.Size(180, 24);
+            this.ToolStripMenuItemIII.Size = new System.Drawing.Size(154, 22);
             this.ToolStripMenuItemIII.Text = "c) find match";
             this.ToolStripMenuItemIII.Click += new System.EventHandler(this.ToolStripMenuItemIII_Click);
             // 
             // ToolStripMenuItemIV
             // 
             this.ToolStripMenuItemIV.Name = "ToolStripMenuItemIV";
-            this.ToolStripMenuItemIV.Size = new System.Drawing.Size(180, 24);
+            this.ToolStripMenuItemIV.Size = new System.Drawing.Size(154, 22);
             this.ToolStripMenuItemIV.Text = "g) retrieve lines";
             this.ToolStripMenuItemIV.Click += new System.EventHandler(this.ToolStripMenuItemIV_Click);
             // 
@@ -267,14 +277,15 @@
             this.toolStripMenuItemdIV});
             this.menuStrip1.Location = new System.Drawing.Point(0, 1);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(409, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(329, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // ToolStripMenuItemdI
             // 
             this.ToolStripMenuItemdI.Name = "ToolStripMenuItemdI";
-            this.ToolStripMenuItemdI.Size = new System.Drawing.Size(95, 24);
+            this.ToolStripMenuItemdI.Size = new System.Drawing.Size(77, 20);
             this.ToolStripMenuItemdI.Text = "send down";
             this.ToolStripMenuItemdI.Click += new System.EventHandler(this.ToolStripMenuItemdI_Click);
             this.ToolStripMenuItemdI.MouseEnter += new System.EventHandler(this.hi_mouse);
@@ -283,7 +294,7 @@
             // ToolStripMenuItemdII
             // 
             this.ToolStripMenuItemdII.Name = "ToolStripMenuItemdII";
-            this.ToolStripMenuItemdII.Size = new System.Drawing.Size(63, 24);
+            this.ToolStripMenuItemdII.Size = new System.Drawing.Size(51, 20);
             this.ToolStripMenuItemdII.Text = "perish";
             this.ToolStripMenuItemdII.Click += new System.EventHandler(this.ToolStripMenuItemdII_Click);
             this.ToolStripMenuItemdII.MouseEnter += new System.EventHandler(this.hi_mouse);
@@ -292,7 +303,7 @@
             // ToolStripMenuItemdIII
             // 
             this.ToolStripMenuItemdIII.Name = "ToolStripMenuItemdIII";
-            this.ToolStripMenuItemdIII.Size = new System.Drawing.Size(110, 24);
+            this.ToolStripMenuItemdIII.Size = new System.Drawing.Size(89, 20);
             this.ToolStripMenuItemdIII.Text = "c - send right";
             this.ToolStripMenuItemdIII.Click += new System.EventHandler(this.ToolStripMenuItemdIII_Click);
             this.ToolStripMenuItemdIII.MouseEnter += new System.EventHandler(this.hi_mouse);
@@ -301,7 +312,7 @@
             // toolStripMenuItemdIV
             // 
             this.toolStripMenuItemdIV.Name = "toolStripMenuItemdIV";
-            this.toolStripMenuItemdIV.Size = new System.Drawing.Size(133, 24);
+            this.toolStripMenuItemdIV.Size = new System.Drawing.Size(106, 20);
             this.toolStripMenuItemdIV.Text = "d - retrieve AGM";
             this.toolStripMenuItemdIV.Click += new System.EventHandler(this.toolStripMenuItemdIV_Click);
             this.toolStripMenuItemdIV.MouseEnter += new System.EventHandler(this.hi_mouse);
@@ -313,28 +324,30 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 305);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 203);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(575, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(455, 22);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 16);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 17);
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(384, 80);
+            this.textBox2.Location = new System.Drawing.Point(311, 41);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 22);
+            this.textBox2.Size = new System.Drawing.Size(135, 20);
             this.textBox2.TabIndex = 12;
             this.textBox2.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.textBox2.MouseLeave += new System.EventHandler(this.bye_mouse);
@@ -343,20 +356,20 @@
             // 
             this.listBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(384, 108);
+            this.listBox3.Location = new System.Drawing.Point(311, 66);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(2);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(179, 180);
+            this.listBox3.Size = new System.Drawing.Size(135, 134);
             this.listBox3.TabIndex = 13;
             this.listBox3.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.listBox3.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(575, 327);
+            this.ClientSize = new System.Drawing.Size(455, 225);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.statusStrip1);
@@ -368,6 +381,7 @@
             this.Controls.Add(this.comboBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
