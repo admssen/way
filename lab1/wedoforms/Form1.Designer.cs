@@ -37,9 +37,6 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -59,7 +56,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -78,7 +74,7 @@
             "ice",
             "metal",
             "light"});
-            this.comboBox1.Location = new System.Drawing.Point(607, 1);
+            this.comboBox1.Location = new System.Drawing.Point(456, 1);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(119, 24);
             this.comboBox1.TabIndex = 0;
@@ -110,9 +106,9 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(413, 41);
+            this.groupBox1.Location = new System.Drawing.Point(289, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(116, 247);
+            this.groupBox1.Size = new System.Drawing.Size(89, 178);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "souls";
@@ -187,43 +183,6 @@
             this.radioButton2.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.radioButton2.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(266, 41);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(116, 247);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "vex";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 47);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 20);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "no souls";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            //this.checkBox2.MouseEnter += new System.EventHandler(this.checkBox2_MouseEnter);
-            //this.checkBox2.MouseLeave += new System.EventHandler(this.checkBox2_MouseLeave);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 21);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 20);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "no praise";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            //this.checkBox1.MouseEnter += new System.EventHandler(this.checkBox1_MouseEnter);
-            //this.checkBox1.MouseLeave += new System.EventHandler(this.checkBox1_MouseLeave);
-            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -232,7 +191,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(121, 212);
             this.listBox1.TabIndex = 4;
-            //this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.listBox1.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
@@ -269,7 +227,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(181, 100);
             this.contextMenuStrip1.Text = "what";
-            //this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // ToolStripMenuItemI
             // 
@@ -310,16 +267,15 @@
             this.toolStripMenuItemdIV});
             this.menuStrip1.Location = new System.Drawing.Point(0, 1);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(508, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(409, 28);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
-            //this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_1);
             // 
             // ToolStripMenuItemdI
             // 
             this.ToolStripMenuItemdI.Name = "ToolStripMenuItemdI";
-            this.ToolStripMenuItemdI.Size = new System.Drawing.Size(109, 24);
-            this.ToolStripMenuItemdI.Text = "send number";
+            this.ToolStripMenuItemdI.Size = new System.Drawing.Size(95, 24);
+            this.ToolStripMenuItemdI.Text = "send down";
             this.ToolStripMenuItemdI.Click += new System.EventHandler(this.ToolStripMenuItemdI_Click);
             this.ToolStripMenuItemdI.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.ToolStripMenuItemdI.MouseLeave += new System.EventHandler(this.bye_mouse);
@@ -327,8 +283,8 @@
             // ToolStripMenuItemdII
             // 
             this.ToolStripMenuItemdII.Name = "ToolStripMenuItemdII";
-            this.ToolStripMenuItemdII.Size = new System.Drawing.Size(118, 24);
-            this.ToolStripMenuItemdII.Text = "perish number";
+            this.ToolStripMenuItemdII.Size = new System.Drawing.Size(63, 24);
+            this.ToolStripMenuItemdII.Text = "perish";
             this.ToolStripMenuItemdII.Click += new System.EventHandler(this.ToolStripMenuItemdII_Click);
             this.ToolStripMenuItemdII.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.ToolStripMenuItemdII.MouseLeave += new System.EventHandler(this.bye_mouse);
@@ -336,8 +292,8 @@
             // ToolStripMenuItemdIII
             // 
             this.ToolStripMenuItemdIII.Name = "ToolStripMenuItemdIII";
-            this.ToolStripMenuItemdIII.Size = new System.Drawing.Size(136, 24);
-            this.ToolStripMenuItemdIII.Text = "c - send numbers";
+            this.ToolStripMenuItemdIII.Size = new System.Drawing.Size(110, 24);
+            this.ToolStripMenuItemdIII.Text = "c - send right";
             this.ToolStripMenuItemdIII.Click += new System.EventHandler(this.ToolStripMenuItemdIII_Click);
             this.ToolStripMenuItemdIII.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.ToolStripMenuItemdIII.MouseLeave += new System.EventHandler(this.bye_mouse);
@@ -345,8 +301,8 @@
             // toolStripMenuItemdIV
             // 
             this.toolStripMenuItemdIV.Name = "toolStripMenuItemdIV";
-            this.toolStripMenuItemdIV.Size = new System.Drawing.Size(137, 24);
-            this.toolStripMenuItemdIV.Text = "d - retrieve cause";
+            this.toolStripMenuItemdIV.Size = new System.Drawing.Size(133, 24);
+            this.toolStripMenuItemdIV.Text = "d - retrieve AGM";
             this.toolStripMenuItemdIV.Click += new System.EventHandler(this.toolStripMenuItemdIV_Click);
             this.toolStripMenuItemdIV.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.toolStripMenuItemdIV.MouseLeave += new System.EventHandler(this.bye_mouse);
@@ -359,7 +315,7 @@
             this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 305);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(726, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(575, 22);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -367,22 +323,19 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
-            //this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 16);
-            //this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(535, 41);
+            this.textBox2.Location = new System.Drawing.Point(384, 80);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(179, 22);
             this.textBox2.TabIndex = 12;
-            //this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.textBox2.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
@@ -391,11 +344,10 @@
             this.listBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(535, 76);
+            this.listBox3.Location = new System.Drawing.Point(384, 108);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(179, 212);
+            this.listBox3.Size = new System.Drawing.Size(179, 180);
             this.listBox3.TabIndex = 13;
-            //this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             this.listBox3.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.listBox3.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
@@ -404,7 +356,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(726, 327);
+            this.ClientSize = new System.Drawing.Size(575, 327);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.statusStrip1);
@@ -412,7 +364,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
             this.ForeColor = System.Drawing.Color.Black;
@@ -421,15 +372,11 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "praise the form!";
-            //this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            //this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -445,9 +392,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.TextBox textBox1;

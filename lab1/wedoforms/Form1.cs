@@ -17,10 +17,32 @@ namespace wedoforms
         private bool taptap; // для комбо с двойным кликом
         private bool praise_forbidden; // для блокирования комбобокса
         private bool souls_forbidden; // для блокирования радиокнопок
+        CheckBox cb1;
+        CheckBox cb2;
         Thread NewOne; // помогает избежать странного бага при ресете
         public Form1() // конструктор
         {
             InitializeComponent();
+            cb1 = new CheckBox();
+            cb2 = new CheckBox();
+            //cb1.Top = 100;
+            //cb1.Left = 200;
+            cb1.Location = Location = new System.Drawing.Point(380, 20);
+            cb1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cb1.Name = "cb1";
+            cb1.Text = "lock";
+            //cb2.Top = 200;
+            //cb2.Left = 200;
+            cb2.Location = Location = new System.Drawing.Point(240, 205);
+            cb2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cb2.Name = "cb2";
+            cb2.Text = "lock";
+            this.cb1.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.cb2.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.cb1.MouseLeave += new System.EventHandler(this.bye_mouse);
+            this.cb2.MouseLeave += new System.EventHandler(this.bye_mouse);
+            Controls.Add(cb1);
+            Controls.Add(cb2);
             this.CenterToScreen();
             this.KeyPreview = true;
             this.ContextMenuStrip = contextMenuStrip1;
@@ -182,11 +204,12 @@ namespace wedoforms
 
         // ЧЕКБОКСЫ
         
+        /*
         private void checkBox1_CheckedChanged(object sender, EventArgs e) // блокирует комбобокс
         { praise_forbidden = checkBox1.Checked; }
         private void checkBox2_CheckedChanged(object sender, EventArgs e) // блокирует радиокнопки
         { souls_forbidden = checkBox2.Checked; }
-
+        */
         // КОНТЕКСТНОЕ МЕНЮ
         
         private void ToolStripMenuItemI_Click(object sender, EventArgs e) // отправить строку
