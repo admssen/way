@@ -80,6 +80,9 @@
             this.comboBox1.Size = new System.Drawing.Size(119, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown_1);
             this.comboBox1.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.comboBox1.MouseLeave += new System.EventHandler(this.bye_mouse);
@@ -95,7 +98,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "gloomy";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.rb_click);
             this.radioButton1.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.radioButton1.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
@@ -128,7 +131,7 @@
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "gone";
             this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.rb_click);
             this.radioButton6.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.radioButton6.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
@@ -143,7 +146,7 @@
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "darker";
             this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.rb_click);
             this.radioButton5.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.radioButton5.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
@@ -158,7 +161,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "dark";
             this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.rb_click);
             this.radioButton4.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.radioButton4.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
@@ -173,7 +176,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "twilight";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.rb_click);
             this.radioButton3.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.radioButton3.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
@@ -188,7 +191,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "shady";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.rb_click);
             this.radioButton2.MouseEnter += new System.EventHandler(this.hi_mouse);
             this.radioButton2.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
@@ -244,28 +247,28 @@
             // ToolStripMenuItemI
             // 
             this.ToolStripMenuItemI.Name = "ToolStripMenuItemI";
-            this.ToolStripMenuItemI.Size = new System.Drawing.Size(180, 24);
+            this.ToolStripMenuItemI.Size = new System.Drawing.Size(185, 24);
             this.ToolStripMenuItemI.Text = "send line";
             this.ToolStripMenuItemI.Click += new System.EventHandler(this.ToolStripMenuItemI_Click);
             // 
             // ToolStripMenuItemII
             // 
             this.ToolStripMenuItemII.Name = "ToolStripMenuItemII";
-            this.ToolStripMenuItemII.Size = new System.Drawing.Size(180, 24);
+            this.ToolStripMenuItemII.Size = new System.Drawing.Size(185, 24);
             this.ToolStripMenuItemII.Text = "perish chosen";
             this.ToolStripMenuItemII.Click += new System.EventHandler(this.ToolStripMenuItemII_Click);
             // 
             // ToolStripMenuItemIII
             // 
             this.ToolStripMenuItemIII.Name = "ToolStripMenuItemIII";
-            this.ToolStripMenuItemIII.Size = new System.Drawing.Size(210, 24);
+            this.ToolStripMenuItemIII.Size = new System.Drawing.Size(185, 24);
             this.ToolStripMenuItemIII.Text = "[c] find match";
             this.ToolStripMenuItemIII.Click += new System.EventHandler(this.ToolStripMenuItemIII_Click);
             // 
             // ToolStripMenuItemIV
             // 
             this.ToolStripMenuItemIV.Name = "ToolStripMenuItemIV";
-            this.ToolStripMenuItemIV.Size = new System.Drawing.Size(210, 24);
+            this.ToolStripMenuItemIV.Size = new System.Drawing.Size(185, 24);
             this.ToolStripMenuItemIV.Text = "[g] retrieve lines";
             this.ToolStripMenuItemIV.Click += new System.EventHandler(this.ToolStripMenuItemIV_Click);
             // 
@@ -288,7 +291,7 @@
             // ToolStripMenuItemdI
             // 
             this.ToolStripMenuItemdI.Name = "ToolStripMenuItemdI";
-            this.ToolStripMenuItemdI.Size = new System.Drawing.Size(95, 26);
+            this.ToolStripMenuItemdI.Size = new System.Drawing.Size(95, 24);
             this.ToolStripMenuItemdI.Text = "send down";
             this.ToolStripMenuItemdI.Click += new System.EventHandler(this.ToolStripMenuItemdI_Click);
             this.ToolStripMenuItemdI.MouseEnter += new System.EventHandler(this.hi_mouse);
@@ -297,7 +300,7 @@
             // ToolStripMenuItemdII
             // 
             this.ToolStripMenuItemdII.Name = "ToolStripMenuItemdII";
-            this.ToolStripMenuItemdII.Size = new System.Drawing.Size(63, 26);
+            this.ToolStripMenuItemdII.Size = new System.Drawing.Size(63, 24);
             this.ToolStripMenuItemdII.Text = "perish";
             this.ToolStripMenuItemdII.Click += new System.EventHandler(this.ToolStripMenuItemdII_Click);
             this.ToolStripMenuItemdII.MouseEnter += new System.EventHandler(this.hi_mouse);
@@ -306,7 +309,7 @@
             // ToolStripMenuItemdIII
             // 
             this.ToolStripMenuItemdIII.Name = "ToolStripMenuItemdIII";
-            this.ToolStripMenuItemdIII.Size = new System.Drawing.Size(110, 26);
+            this.ToolStripMenuItemdIII.Size = new System.Drawing.Size(110, 24);
             this.ToolStripMenuItemdIII.Text = "[c] send right";
             this.ToolStripMenuItemdIII.Click += new System.EventHandler(this.ToolStripMenuItemdIII_Click);
             this.ToolStripMenuItemdIII.MouseEnter += new System.EventHandler(this.hi_mouse);
@@ -315,7 +318,7 @@
             // toolStripMenuItemdIV
             // 
             this.toolStripMenuItemdIV.Name = "toolStripMenuItemdIV";
-            this.toolStripMenuItemdIV.Size = new System.Drawing.Size(133, 26);
+            this.toolStripMenuItemdIV.Size = new System.Drawing.Size(133, 24);
             this.toolStripMenuItemdIV.Text = "[d] retrieve AGM";
             this.toolStripMenuItemdIV.Click += new System.EventHandler(this.toolStripMenuItemdIV_Click);
             this.toolStripMenuItemdIV.MouseEnter += new System.EventHandler(this.hi_mouse);
@@ -392,6 +395,7 @@
             this.Name = "Form1";
             this.Text = "praise the form!";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);
             this.groupBox1.ResumeLayout(false);

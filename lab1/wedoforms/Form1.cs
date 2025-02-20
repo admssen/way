@@ -8,77 +8,92 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Xml.Schema;
 
 namespace wedoforms
 {
     public partial class Form1 : Form
     {
-        private bool tap; // для комбо с кликом
-        private bool taptap; // для комбо с двойным кликом
         private bool praise_forbidden; // для блокирования комбобокса
         private bool souls_forbidden; // для блокирования радиокнопок
-        CheckBox cb1;
-        CheckBox cb2;
+        private bool resetting;
+        private bool exiting;
+        private bool taptap;
+        private int kills;
+        private CheckBox cb1;
+        private CheckBox cb2;
+        private char current_rb;
+        private string current_praise;
         Thread NewOne; // помогает избежать странного бага при ресете
         public Form1() // конструктор
         {
             InitializeComponent();
             cb1 = new CheckBox();
-            cb2 = new CheckBox();
-            //cb1.Top = 100;
-            //cb1.Left = 200;
             cb1.Location = Location = new System.Drawing.Point(400, 20);
             cb1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb1.Name = "cb1";
             cb1.Text = "lock";
-            //cb2.Top = 200;
-            //cb2.Left = 200;
+            this.cb1.CheckedChanged += new System.EventHandler(this.cb1_tap);
+            this.cb1.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.cb1.MouseLeave += new System.EventHandler(this.bye_mouse);
+            cb2 = new CheckBox();
             cb2.Location = Location = new System.Drawing.Point(260, 182);
             cb2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cb2.Name = "cb2";
             cb2.Text = "lock";
-            this.cb1.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.cb2.CheckedChanged += new System.EventHandler(this.cb2_tap);
             this.cb2.MouseEnter += new System.EventHandler(this.hi_mouse);
-            this.cb1.MouseLeave += new System.EventHandler(this.bye_mouse);
             this.cb2.MouseLeave += new System.EventHandler(this.bye_mouse);
             Controls.Add(cb1);
             Controls.Add(cb2);
             this.CenterToScreen();
             this.KeyPreview = true;
             this.ContextMenuStrip = contextMenuStrip1;
-            this.tap = false;
-            this.taptap = false;
             this.praise_forbidden = false;
             this.souls_forbidden = false;
+            resetting = false;
+            exiting = false;
+            taptap = false;
+            current_rb = '0';
+            current_praise = string.Empty;
+            kills = 0;
         }
-        public void setAll() // закрыть текущую форму, начать новую
+        public void reset_all() // закрыть текущую форму, начать новую
         {
-            this.Close();
             NewOne = new Thread(form_reset_bugless);
             NewOne.SetApartmentState(ApartmentState.STA);
             NewOne.Start();
         }
-        private void form_reset_bugless(object frm) // то, что попадает в новый поток
+        private void form_reset_bugless() // то, что попадает в новый поток
         {
-            Application.Run(new Form1());
+            Thread.Sleep(200);
+            if (!this.taptap) { this.Close(); Application.Run(new Form1()); }
+            else { this.taptap = false; }
         }
 
         // КОМБИНАЦИИ С ФОРМОЙ
-        
+
         private void Form1_MouseClick(object sender, MouseEventArgs e) // клик
-        { if (e.Button == MouseButtons.Left) { tap = true; } }
+        { if (e.Button == MouseButtons.Left && (resetting)) { reset_all(); } }
         private void Form1_MouseDoubleClick(object sender, MouseEventArgs e) // двойной клик
-        { if (e.Button == MouseButtons.Left) { taptap = true; } }
+        { if (e.Button == MouseButtons.Left) {
+                if (exiting && !resetting) { this.Close(); }
+                else if (!exiting && resetting) { taptap = true; }
+            } }
         private void Form1_KeyDown(object sender, KeyEventArgs e) // комбинации с альтом
         {
-            if (tap && e.Alt && e.KeyCode == Keys.I)
-            { setAll(); }
-            else if (taptap && e.Alt && e.KeyCode == Keys.X)
-            { this.Close(); }
+            if (e.Alt && e.KeyCode == Keys.F)
+            { resetting = true; }
+            else if (e.Alt && e.KeyCode == Keys.X)
+            { exiting = true; }
+        }
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            resetting = false; exiting = false;
         }
 
         // МЕНЮ ОКНА, ВСЁ С ЦИФРАМИ
-        
+
         private void ToolStripMenuItemdI_Click(object sender, EventArgs e) // отправить число из текстбокса в листбокс. Форматировать.
         {
             if (!string.IsNullOrEmpty(textBox1.Text)) {
@@ -124,7 +139,21 @@ namespace wedoforms
         // КОМБО БОКС
         
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) // меняет заголовок окна
-        { if (!praise_forbidden) { this.Text = "praise the " + comboBox1.SelectedItem.ToString() + "!"; } }
+        {
+            if (!praise_forbidden)
+            {
+                current_praise = comboBox1.SelectedItem.ToString();
+                this.Text = "praise the " + current_praise + "!";
+            }
+            else { Thread rip = new Thread(begone); rip.Start(); }
+        }
+        private void begone() // тот, кто придумал комбобоксы - я желаю смерти тебе, и всей твоей семье.
+        {
+            comboBox1.Text = current_praise.ToString();
+            Thread.CurrentThread.Abort();
+        }
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        { if (praise_forbidden) { comboBox1.Text = current_praise; } }
         private void comboBox1_KeyDown_1(object sender, KeyEventArgs e) // добавляет элементы на энтер
         {
             if (!praise_forbidden)
@@ -139,39 +168,42 @@ namespace wedoforms
         }
 
         // РАДИОКНОПКИ, МЕНЯЮТ ЦВЕТ
-        
-        private void radioButton1_CheckedChanged(object sender, EventArgs e) // с хард-коженной проверкой на чекбоксы
+
+        private void rb_click(object sender, EventArgs e)
         {
-            if (!souls_forbidden) { this.BackColor = ColorTranslator.FromHtml("#777799"); }
-            else { radioButton1.Checked = false; }
-        }
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!souls_forbidden) { this.BackColor = ColorTranslator.FromHtml("#666688"); }
-            else { radioButton2.Checked = false; }
-        }
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!souls_forbidden) { this.BackColor = ColorTranslator.FromHtml("#555577"); }
-            else { radioButton3.Checked = false; }
-        }
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!souls_forbidden) { this.BackColor = ColorTranslator.FromHtml("#444466"); }
-            else { radioButton4.Checked = false; }
-        }
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!souls_forbidden) { this.BackColor = ColorTranslator.FromHtml("#333355"); }
-            else { radioButton5.Checked = false; }
-        }
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!souls_forbidden) { this.BackColor = ColorTranslator.FromHtml("#222244"); }
-            else { radioButton6.Checked = false; }
+            dynamic meme = (dynamic)sender;
+            if (!souls_forbidden)
+            {
+                string chroma = string.Empty;
+                switch (meme.Name[meme.Name.Length - 1])
+                {
+                    case '1':
+                        chroma = "#887799";
+                        break;
+                    case '2':
+                        chroma = "#776688";
+                        break;
+                    case '3':
+                        chroma = "#665577";
+                        break;
+                    case '4':
+                        chroma = "#554466";
+                        break;
+                    case '5':
+                        chroma = "#443355";
+                        break;
+                    case '6':
+                        chroma = "#332244";
+                        break;
+                }
+                current_rb = meme.Name[meme.Name.Length - 1];
+                this.BackColor = ColorTranslator.FromHtml(chroma);
+            }
+            else { meme.Checked = (meme.Name[meme.Name.Length - 1] == current_rb); }
         }
 
         // ВВОД ЦИФР В ТЕКСТБОКС. ПОПРОБУЙТЕ СЛОМАЙТЕ ЭТО! (ой, Ctrl+V...)
+        // больше не ой
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e) // оно работает.
         {
@@ -204,12 +236,12 @@ namespace wedoforms
 
         // ЧЕКБОКСЫ
         
-        /*
-        private void checkBox1_CheckedChanged(object sender, EventArgs e) // блокирует комбобокс
-        { praise_forbidden = checkBox1.Checked; }
-        private void checkBox2_CheckedChanged(object sender, EventArgs e) // блокирует радиокнопки
-        { souls_forbidden = checkBox2.Checked; }
-        */
+        
+        private void cb1_tap(object sender, EventArgs e) // блокирует комбобокс
+        { current_praise = comboBox1.Text; praise_forbidden = cb1.Checked; }
+        private void cb2_tap(object sender, EventArgs e) // блокирует радиокнопки
+        { souls_forbidden = cb2.Checked; }
+        
         // КОНТЕКСТНОЕ МЕНЮ
         
         private void ToolStripMenuItemI_Click(object sender, EventArgs e) // отправить строку
