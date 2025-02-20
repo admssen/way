@@ -84,8 +84,8 @@
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown_1);
-            this.comboBox1.MouseEnter += new System.EventHandler(this.comboBox1_MouseEnter);
-            this.comboBox1.MouseLeave += new System.EventHandler(this.comboBox1_MouseLeave);
+            this.comboBox1.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.comboBox1.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // radioButton1
             // 
@@ -98,8 +98,8 @@
             this.radioButton1.Text = "gloomy";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            this.radioButton1.MouseEnter += new System.EventHandler(this.radioButton1_MouseEnter);
-            this.radioButton1.MouseLeave += new System.EventHandler(this.radioButton1_MouseLeave);
+            this.radioButton1.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.radioButton1.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // groupBox1
             // 
@@ -128,8 +128,8 @@
             this.radioButton6.Text = "gone";
             this.radioButton6.UseVisualStyleBackColor = true;
             this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
-            this.radioButton6.MouseEnter += new System.EventHandler(this.radioButton6_MouseEnter);
-            this.radioButton6.MouseLeave += new System.EventHandler(this.radioButton6_MouseLeave);
+            this.radioButton6.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.radioButton6.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // radioButton5
             // 
@@ -142,8 +142,8 @@
             this.radioButton5.Text = "darker";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
-            this.radioButton5.MouseEnter += new System.EventHandler(this.radioButton5_MouseEnter);
-            this.radioButton5.MouseLeave += new System.EventHandler(this.radioButton5_MouseLeave);
+            this.radioButton5.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.radioButton5.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // radioButton4
             // 
@@ -156,8 +156,8 @@
             this.radioButton4.Text = "dark";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
-            this.radioButton4.MouseEnter += new System.EventHandler(this.radioButton4_MouseEnter);
-            this.radioButton4.MouseLeave += new System.EventHandler(this.radioButton4_MouseLeave);
+            this.radioButton4.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.radioButton4.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // radioButton3
             // 
@@ -170,8 +170,8 @@
             this.radioButton3.Text = "twilight";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
-            this.radioButton3.MouseEnter += new System.EventHandler(this.radioButton3_MouseEnter);
-            this.radioButton3.MouseLeave += new System.EventHandler(this.radioButton3_MouseLeave);
+            this.radioButton3.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.radioButton3.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // radioButton2
             // 
@@ -184,8 +184,8 @@
             this.radioButton2.Text = "shady";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            this.radioButton2.MouseEnter += new System.EventHandler(this.radioButton2_MouseEnter);
-            this.radioButton2.MouseLeave += new System.EventHandler(this.radioButton2_MouseLeave);
+            this.radioButton2.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.radioButton2.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // groupBox2
             // 
@@ -208,8 +208,8 @@
             this.checkBox2.Text = "no souls";
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            this.checkBox2.MouseEnter += new System.EventHandler(this.checkBox2_MouseEnter);
-            this.checkBox2.MouseLeave += new System.EventHandler(this.checkBox2_MouseLeave);
+            //this.checkBox2.MouseEnter += new System.EventHandler(this.checkBox2_MouseEnter);
+            //this.checkBox2.MouseLeave += new System.EventHandler(this.checkBox2_MouseLeave);
             // 
             // checkBox1
             // 
@@ -221,8 +221,8 @@
             this.checkBox1.Text = "no praise";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            this.checkBox1.MouseEnter += new System.EventHandler(this.checkBox1_MouseEnter);
-            this.checkBox1.MouseLeave += new System.EventHandler(this.checkBox1_MouseLeave);
+            //this.checkBox1.MouseEnter += new System.EventHandler(this.checkBox1_MouseEnter);
+            //this.checkBox1.MouseLeave += new System.EventHandler(this.checkBox1_MouseLeave);
             // 
             // listBox1
             // 
@@ -232,9 +232,9 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(121, 212);
             this.listBox1.TabIndex = 4;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            this.listBox1.MouseEnter += new System.EventHandler(this.listBox1_MouseEnter);
-            this.listBox1.MouseLeave += new System.EventHandler(this.listBox1_MouseLeave);
+            //this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.listBox1.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // listBox2
             // 
@@ -244,8 +244,8 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(121, 212);
             this.listBox2.TabIndex = 5;
-            this.listBox2.MouseEnter += new System.EventHandler(this.listBox2_MouseEnter);
-            this.listBox2.MouseLeave += new System.EventHandler(this.listBox2_MouseLeave);
+            this.listBox2.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.listBox2.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // textBox1
             // 
@@ -254,8 +254,8 @@
             this.textBox1.Size = new System.Drawing.Size(121, 22);
             this.textBox1.TabIndex = 8;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
-            this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
+            this.textBox1.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.textBox1.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // contextMenuStrip1
             // 
@@ -269,7 +269,7 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(181, 100);
             this.contextMenuStrip1.Text = "what";
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            //this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // ToolStripMenuItemI
             // 
@@ -313,7 +313,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(508, 28);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_1);
+            //this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_1);
             // 
             // ToolStripMenuItemdI
             // 
@@ -321,8 +321,8 @@
             this.ToolStripMenuItemdI.Size = new System.Drawing.Size(109, 24);
             this.ToolStripMenuItemdI.Text = "send number";
             this.ToolStripMenuItemdI.Click += new System.EventHandler(this.ToolStripMenuItemdI_Click);
-            this.ToolStripMenuItemdI.MouseEnter += new System.EventHandler(this.ToolStripMenuItemdI_MouseEnter);
-            this.ToolStripMenuItemdI.MouseLeave += new System.EventHandler(this.ToolStripMenuItemdI_MouseLeave);
+            this.ToolStripMenuItemdI.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.ToolStripMenuItemdI.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // ToolStripMenuItemdII
             // 
@@ -330,8 +330,8 @@
             this.ToolStripMenuItemdII.Size = new System.Drawing.Size(118, 24);
             this.ToolStripMenuItemdII.Text = "perish number";
             this.ToolStripMenuItemdII.Click += new System.EventHandler(this.ToolStripMenuItemdII_Click);
-            this.ToolStripMenuItemdII.MouseEnter += new System.EventHandler(this.ToolStripMenuItemdII_MouseEnter);
-            this.ToolStripMenuItemdII.MouseLeave += new System.EventHandler(this.ToolStripMenuItemdII_MouseLeave);
+            this.ToolStripMenuItemdII.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.ToolStripMenuItemdII.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // ToolStripMenuItemdIII
             // 
@@ -339,8 +339,8 @@
             this.ToolStripMenuItemdIII.Size = new System.Drawing.Size(136, 24);
             this.ToolStripMenuItemdIII.Text = "c - send numbers";
             this.ToolStripMenuItemdIII.Click += new System.EventHandler(this.ToolStripMenuItemdIII_Click);
-            this.ToolStripMenuItemdIII.MouseEnter += new System.EventHandler(this.ToolStripMenuItemdIII_MouseEnter);
-            this.ToolStripMenuItemdIII.MouseLeave += new System.EventHandler(this.ToolStripMenuItemdIII_MouseLeave);
+            this.ToolStripMenuItemdIII.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.ToolStripMenuItemdIII.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // toolStripMenuItemdIV
             // 
@@ -348,8 +348,8 @@
             this.toolStripMenuItemdIV.Size = new System.Drawing.Size(137, 24);
             this.toolStripMenuItemdIV.Text = "d - retrieve cause";
             this.toolStripMenuItemdIV.Click += new System.EventHandler(this.toolStripMenuItemdIV_Click);
-            this.toolStripMenuItemdIV.MouseEnter += new System.EventHandler(this.toolStripMenuItemdIV_MouseEnter);
-            this.toolStripMenuItemdIV.MouseLeave += new System.EventHandler(this.toolStripMenuItemdIV_MouseLeave);
+            this.toolStripMenuItemdIV.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.toolStripMenuItemdIV.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // statusStrip1
             // 
@@ -367,13 +367,13 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            //this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 16);
-            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
+            //this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // textBox2
             // 
@@ -382,9 +382,9 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(179, 22);
             this.textBox2.TabIndex = 12;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.textBox2.MouseEnter += new System.EventHandler(this.textBox2_MouseEnter);
-            this.textBox2.MouseLeave += new System.EventHandler(this.textBox2_MouseLeave);
+            //this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.textBox2.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // listBox3
             // 
@@ -395,9 +395,9 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(179, 212);
             this.listBox3.TabIndex = 13;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
-            this.listBox3.MouseEnter += new System.EventHandler(this.listBox3_MouseEnter);
-            this.listBox3.MouseLeave += new System.EventHandler(this.listBox3_MouseLeave);
+            //this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
+            this.listBox3.MouseEnter += new System.EventHandler(this.hi_mouse);
+            this.listBox3.MouseLeave += new System.EventHandler(this.bye_mouse);
             // 
             // Form1
             // 
@@ -421,9 +421,9 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "praise the form!";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            //this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            //this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);
             this.groupBox1.ResumeLayout(false);
