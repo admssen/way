@@ -147,7 +147,7 @@ namespace wedoforms
             }
             else { Thread rip = new Thread(begone); rip.Start(); }
         }
-        private void begone() // тот, кто придумал комбобоксы - я желаю смерти тебе, и всей твоей семье.
+        private void begone()
         {
             comboBox1.Text = current_praise.ToString();
             Thread.CurrentThread.Abort();
@@ -250,9 +250,9 @@ namespace wedoforms
         { foreach (string s in listBox3.SelectedItems.OfType<string>().ToList()) { listBox3.Items.Remove(s); } }
         private void ToolStripMenuItemIII_Click(object sender, EventArgs e) // соединяет короткую с длинной
         {
-            string lb3_shortest = "nuh";
+            string lb3_shortest = string.Empty;
             int lb3_shortest_l = 0;
-            string lb3_longest = "uh";
+            string lb3_longest = string.Empty;
             int lb3_longest_l = 0;
             foreach (string parsed in listBox3.Items.OfType<string>().ToList())
             {
@@ -266,11 +266,12 @@ namespace wedoforms
                 else if (parsed_l > lb3_longest_l)
                 { lb3_longest_l = parsed_l; lb3_longest = parsed; }
             }
-            MessageBox.Show(lb3_shortest + " " + lb3_longest);
+            string result = lb3_shortest + lb3_longest;
+            if (result == string.Empty) { result = "there's none"; }
+            MessageBox.Show(result);
         }
         private void ToolStripMenuItemIV_Click(object sender, EventArgs e) // ищет по букве
         {
-            List<int> rating = new List<int>();
             int maxcount = 0;
             int count = 0;
             string result = "";
@@ -281,14 +282,9 @@ namespace wedoforms
                     if (g == ' ') { space = true; }
                     else if (space) { if (g == s) { count++; space = false; } }
                 }
-                if (count > maxcount) { maxcount = count; }
-                rating.Add(count);
+                if (count > maxcount) { maxcount = count; result = string.Empty; }
+                if (count == maxcount) { result = result + parsed + "\n"; }
                 count = 0;
-            }
-            for (int i = 0; i < rating.Count; i++)
-            {
-                if (rating[i] == maxcount)
-                { result += listBox3.Items.OfType<string>().ToList()[i] + "\n"; }
             }
             MessageBox.Show(result);
         }
